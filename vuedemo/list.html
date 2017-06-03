@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="repeat-object" class="demo">
+        <li v-for="(value, key, index) in object">
+            {{ index }}, {{ key}} : {{ value }}
+        </li>
+    </ul>
+    <div>
+        <span v-for="n in 10">{{ n }}</span>
+    </div>
+    <div id="todo-list-example">
+        <input v-model="newTodoTex"
+               v-on:keyup.enter="addNewTodo"
+               placeholder="Add a todo"
+        >
+        <ul>
+            <li
+                is="todo-item"
+                v-for="(todo, index) in todos"
+                v-bind:key="todo"
+                v-bind:title="todo"
+                v-on:remove="todo.splice(index, 1)">
+
+
+            </li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/list.js"></script>
+</body>
+</html>

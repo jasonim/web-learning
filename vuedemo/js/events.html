@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="example-1">
+        <button v-on:onclick="counter += 1">增加 1</button>
+        <p>这个按钮被点击了 {{ counter }}</p>
+    </div>
+    <input v-model="message" placeholder="edit me">
+    <p>Message is: {{ message }}</p>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>
