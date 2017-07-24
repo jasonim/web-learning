@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/markdown.css">
 </head>
 <body>
 <div id="editor">
     <textarea :value="input" @input="update"></textarea>
     <div v-html="compiledMarkdown"></div>
 </div>
+<script src="https://unpkg.com/vue"></script>
+<script src="js/markdown.js"></script>
 </body>
+
 </html>
