@@ -7,11 +7,13 @@
 </head>
 <body>
 <div id="editor">
-    <textarea :value="input" @input="update"></textarea>
+    <textarea v-model="input" @input="update"></textarea>
+    <!--<p>vuejs/vue@{{ input }}</p>-->
     <div v-html="compiledMarkdown"></div>
 </div>
-<script src="https://unpkg.com/vue"></script>
-<script src="js/markdown.js"></script>
 </body>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+<script src="js/markdown1.js"></script>
 
 </html>

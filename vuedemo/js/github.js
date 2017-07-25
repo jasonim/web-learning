@@ -14,6 +14,7 @@ var demo = new Vue({
     data: {
         branches: ['master', 'dev'],
         currentBranch: 'master',
+        input: 1,
         commits: null
     },
 
